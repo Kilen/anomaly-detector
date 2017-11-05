@@ -3,3 +3,5 @@
 *.swn
 
 data/*
+backup_data/*
+output/*

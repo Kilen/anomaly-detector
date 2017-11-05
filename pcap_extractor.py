@@ -44,7 +44,7 @@ def entropy(data, key):
 
     return ent
 
-def split_by_interval(data, interval = 0.001):
+def split_by_interval(data, interval = 0.1):
     print('------ spliting and grouping:')
     grouped_data = []
     start = data[0]["time"]
@@ -94,7 +94,7 @@ def create_data_frame(grouped_data):
     return df
 
 
-raw_datas = extract_data('./data/traffic.pcap')
+raw_datas = extract_data('./data/sample_1000k.pcap')
 grouped_data = split_by_interval(raw_datas)
 df = create_data_frame(grouped_data)
 df.to_csv("processed.csv", index = False)
